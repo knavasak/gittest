@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Test Page</title>
-  </head>
-  <body>
-      <h1>Test Page</h1>
-  </body>
+<!DOCTYPE HTML>
+<html manifest="cache.appcache">
+<head>
+  <title>Test</title>
+  <script src="test.js"></script>
+  <link rel="stylesheet" href="test.css" media="print">
+  <style>
+    .print-only{
+        display: none;
+    }
+
+    @media print {
+        .no-print {
+            display: none;
+        }
+
+        .print-only{
+            display: block;
+        }
+    }
+  </style>
+</head>
+<body>
+  <p class="no-print">Testing the manifest file.</p>
+</body>
 </html>
